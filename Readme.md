@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Максим Расторгуев](https://up.htmlacademy.ru/htmlcss/22/user/37287).
-* Наставник: [Евгения Зорина].
+* Наставник: [Евгения Зорина](https://htmlacademy.ru/profile/sanguis)
 
 ---
 
