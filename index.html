@@ -7,9 +7,18 @@
   <body>
   	<header class="main-header">
   		<nav class="main-navigation">
-  			<img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип магазина">
+  			<a><img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип магазина"></a>
   			<ul class="site-navigation">
-  				<li class="site-navigation-catalog">Каталог</li>
+  				<li class="site-navigation-catalog">
+  					Каталог
+  					<ul class="menu">
+  						<li class="menu-title">Новинки</li>
+  						<li><a href="catalog.html">Сливочное</a></li>
+  						<li><a href="catalog.html">Щербеты</a></li>
+  						<li><a href="catalog.html">Фруктовый лед</a></li>
+  						<li><a href="catalog.html">Мелорин</a></li>
+  					</ul>
+  				</li>
   				<li><a href="price.html">Доставка и оплата</a></li>
   				<li><a href="info.html">О Компании</a></li>
   			</ul>
@@ -26,19 +35,19 @@
   	</header>
 
   	<main class="container">
-  		<h1 class="visually-hidden">Содержание</h1>
+  		<h1 class="visually-hidden">Интернет-магазин мороженного Глейси</h1>
   		<section class="slider">
-  			<h2 class="visually-hidden">Слайдер</h2>
+  			<h2 class="visually-hidden">Промо</h2>
   			<ul class="slider-list">
-  				<li>
+  				<li class="slider-item">
   					<p class="slider-description"><b>Крем-брюле и пломбир с малиновым джемом</b></p>
   					<a href="catalog.html">Давайте оба!</a>
   				</li>
-  				<li>
+  				<li class="slider-item">
   					<p class="slider-description"><b>Шоколадный пломбир и лимонный сорбет</b></p>
   					<a href="catalog.html">Давайте оба!</a>
   				</li>
-  				<li>
+  				<li class="slider-item">
   					<p class="slider-description"><b>Пломбир с помадкой и клубничный щербет</b></p>
   					<a href="catalog.html">Давайте оба!</a>
   				</li>
@@ -47,48 +56,50 @@
 
   		<section class="stock">
   			<h2 class="visually-hidden">Акции</h2>
-  			<div class="stock-raspberry">
-  				<h3>Малинка даром!</h3>
-  				<p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-  				<a href="catalog.html">Хочу варенье!</a>
-  			</div>
-  			<div class="stock-chocolate">
-  				<h3>Шоколадки даром!</h3>
-  				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей школадной присыпки совершенно бесплатно.</p>
-  				<a href="catalog.html">Хочу шоколадки!</a>
-  			</div>
+  			<ul>
+  				<li class="stock-item stock-raspberry">
+  					<h3>Малинка даром!</h3>
+  					<p>При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+  					<a href="catalog.html">Хочу варенье!</a>
+  				</li>
+  				<li class="stock-item stock-chocolate">
+  					<h3>Шоколадки даром!</h3>
+  					<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей школадной присыпки совершенно бесплатно.</p>
+  					<a href="catalog.html">Хочу шоколадки!</a>
+  				</li>		
+  			</ul>
   		</section>
 
-  		<section class="items">
+  		<section class="catalog">
   			<h2 class="visually-hidden">Товары</h2>
-  			<ul class="items-list">
-  				<li>
+  			<ul class="catalog-list">
+  				<li class="catalog-item">
   					<a href="catalog-item.html">
   						<img src="http://placehold.it/150x150" width="150" height="150" alt="Изображение товара">
   						<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
   					</a>
-  					<p class="price"><span class="price-number">310Р</span>/кг</p>
+  					<p class="price">310Р<span class="price-weight">/кг</span></p>
   				</li>
-  				<li>
+  				<li class="catalog-item">
   					<a href="catalog-item.html">
   						<img src="http://placehold.it/150x150" width="150" height="150" alt="Изображение товара">
   						<p>Сливочно-кофейное с кусочками шоколада</p>
   					</a>
-  					<p class="price"><span class="price-number">380Р</span>/кг</p>
+  					<p class="price">380Р<span class="price-weight">/кг</span></p>
   				</li>
-  				<li>
+  				<li class="catalog-item">
   					<a href="catalog-item.html">
   						<img src="http://placehold.it/150x150" width="150" height="150" alt="Изображение товара">
   						<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
   					</a>
-  					<p class="price"><span class="price-number">355Р</span>/кг</p>
+  					<p class="price">355Р<span class="price-weight">/кг</span></p>
   				</li>
-  				<li>
+  				<li class="catalog-item">
   					<a href="catalog-item.html">
   						<img src="http://placehold.it/150x150" width="150" height="150" alt="Изображение товара">
   						<p>Сливочное крем-брюле с карамельной подливкой</p>
   					</a>
-  					<p class="price"><span class="price-number">415Р</span>/кг</p>
+  					<p class="price">415Р<span class="price-weight">/кг</span></p>
   				</li>
   			</ul>
   		</section>
@@ -96,16 +107,24 @@
   		<section class="about-us">
   			<h2 class="about-us-title">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
   			<ul class="about-us-elements">
-  				<li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-  				<li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-  				<li>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-  				<li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+  				<li class="description description-1">
+  					Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+  				</li>
+  				<li class="description description-2">
+  					Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+  				</li>
+  				<li class="description description-3">
+  					Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+  				</li>
+  				<li class="description description-4">
+  					Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+  				</li>
   			</ul>
   		</section>
 
   		<section class="news">
   			<h2 class="news-title">Новое в нашем блоге</h2>
-  			<a href="blog.html"><p class="news-text">10 способов сервировки фруктовых щербетов к столу</p></a>
+  			<p class="news-text"><a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a></p>
   		</section>
 
   		<section class="dispatch">
@@ -127,7 +146,7 @@
   					<span class="bold">8 812 450-25-25</span><br>
   					(с 10 до 20 ежедневно)
   				</p>
-  				<span class="feedback-open">Форма обратной связи</span>
+  				<a class="button" href="feedback.html">Форма обратной связи</a>
   			</div>
   		</section>
   	</main>
@@ -155,17 +174,6 @@
   			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
   		</div>
   	</footer>
-
-  	<section class="modal modal-menu">
-  		<h2 class="visually-hidden">Меню</h2>
-  		<p>Новинки</p>
-  		<ul>
-  			<li><a href="catalog.html">Сливочное</a></li>
-  			<li><a href="catalog.html">Щербеты</a></li>
-  			<li><a href="catalog.html">Фруктовый лед</a></li>
-  			<li><a href="catalog.html">Мелорин</a></li>
-  		</ul>
-  	</section>
 
   	<section class="modal modal-login">
   		<!-- Форма регистрации -->
