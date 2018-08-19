@@ -25,8 +25,15 @@
   				<li><a href="info.html">О Компании</a></li>
   			</ul>
   			<ul class="user-navigation">
-  				<li class="login">Вход</li>
-  				<li class="cart">Пусто</li>
+          <li class="search">
+            <button class="button search-button" aria-label="Поиск"></button>
+          </li>
+  				<li class="login">
+            <a class="login" href="login.html">Вход</a>   
+          </li>
+  				<li class="cart">
+            <a class="cart" href="cart.html">Пусто</a>
+          </li>
   			</ul>
   		</nav>
 
@@ -132,12 +139,22 @@
   		<section class="dispatch">
   			<h2 class="visually-hidden">Рассылка</h2>
   			<p class="dispatch-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  			<!-- Форма рассылки -->
+  			<form class="dispatch-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="email">Электронная почта</label>
+           <input type="email" name="email" placeholder="Электронная почта" required>
+          </p>
+          <p>
+            <button class="button" type="submit">Отправить</button>
+          </p>
+        </form>
   		</section>
 
   		<section class="map">
   			<h2 class="visually-hidden">Карта и адрес</h2>
-  			<!-- Карта -->
+  			<p>
+          <img src="img/map.jpg" width="1050" height="744" alt="Главный офис и офлайн-магазин по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">   
+        </p>
   			<div class="map-adress">
   				<p>
   					Адреса главного офиса и офлайн-магазина:<br>
@@ -178,18 +195,52 @@
   		</div>
   	</footer>
 
-  	<section class="modal modal-login">
-  		<!-- Форма регистрации -->
+  	<section class="modal modal-login" >
+  		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="email">Электронная почта</label>
+          <input type="email" name="email" placeholder="Электронная почта" required>
+        </p>
+        <p>
+          <label class="visually-hidden" for="password">Пароль</label>
+          <input type="password" name="password" placeholder="Пароль" required>
+        </p>
+        <p>
+          <a href="restore.html">Забыли пароль?</a>
+          <a href="registration">Новая регистрация</a>
+        </p>
+        <p>
+          <button class="button" type="submit">Войти</button>
+        </p>
+      </form>
   	</section>
 
   	<section class="modal modal-search">
-  		<!-- Форма поиска-->
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+        <label class="visually-hidden" for="search">Поиск</label>
+  		  <input type="search" name="search" placeholder="Что ищем?">
+      </form>
   	</section>
 
   	<section class="modal modal-feedback">
   		<p><b>Мы обязательно вам ответим!</b></p>
-  		<!-- Форма обратной связи -->
-  		<span class="modal-close">X</span>
+  		<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="name">Имя</label>
+          <input type="text" name="name" placeholder="Как вас зовут?" required>
+        </p>
+        <p>
+          <label class="visually-hidden" for="email">Имя</label>
+          <input type="email" name="email" placeholder="Ваша почта для ответа?" required>
+        </p>
+        <p>
+          <textarea name="text" placeholder="Напишите что-нибудь..." required></textarea>
+        </p>
+        <p>
+          <button class="button" type="submit">Отправить</button>
+        </p>
+      </form>
+  		<button class="modal-close" type="button">Закрыть</button>
   	</section>
   </body>
 </html>

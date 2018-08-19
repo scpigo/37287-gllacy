@@ -27,8 +27,15 @@
           <li><a href="info.html">О Компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login">Вход</li>
-          <li class="cart">Пусто</li>
+          <li class="search">
+            <button class="button search-button" aria-label="Поиск"></button>
+          </li>
+          <li class="login">
+            <a class="login" href="login.html">Вход</a>   
+          </li>
+          <li class="cart">
+            <a class="cart" href="cart.html">Пусто</a>
+          </li>
         </ul>
       </nav>
 
@@ -49,7 +56,55 @@
       <h1>Сливочное мороженое</h1>
 
       <section class="filter">
-        <!-- Фильтр -->
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Сортировка:</legend>
+            <select name="sort">
+              <option value="popularity">по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat">по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Цена:</legend>
+            <!-- ??? -->
+          </fieldset>
+          <fieldset>
+            <legend>Жирность:</legend>
+            <label>
+             <input type="radio" name="fat" value="0">0%
+            </label>
+            <label>
+             <input type="radio" name="fat" value="10" checked>до 10%
+            </label>
+            <label>
+             <input type="radio" name="fat" value="30">до 30%
+            </label>
+            <label>
+             <input type="radio" name="fat" value=">30">выше 30%
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <label>
+              <input type="checkbox" name="fill" value="chocolate" checked>шоколадные
+            </label>
+            <label>
+              <input type="checkbox" name="fill" value="sugar" checked>сахарные присыпки
+            </label>
+            <label>
+              <input type="checkbox" name="fill" value="fruits">фрукты
+            </label>
+            <label>
+              <input type="checkbox" name="fill" value="surup">сиропы
+            </label>
+            <label>
+              <input type="checkbox" name="fill" value="jam">джемы
+            </label>
+          </fieldset>
+          <button class="button filter-button" type="submit">Применить</button>
+        </form>
       </section>
 
       <section class="catalog">
@@ -61,6 +116,7 @@
               <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
             <p class="price">310Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -68,6 +124,7 @@
               <p>Сливочно-кофейное с кусочками шоколада</p>
             </a>
             <p class="price">380Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -75,6 +132,7 @@
               <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
             </a>
             <p class="price">355Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -82,6 +140,7 @@
               <p>Сливочное крем-брюле с карамельной подливкой</p>
             </a>
             <p class="price">415Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -89,6 +148,7 @@
               <p>Сливочное с брусничным джемом</p>
             </a>
             <p class="price">325Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -96,6 +156,7 @@
               <p>Сливочно-черничное с цельными ягодами черники</p>
             </a>
             <p class="price">410Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -103,6 +164,7 @@
               <p>Сливочно-лимонное с карамельной присыпкой</p>
             </a>
             <p class="price">375Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -110,6 +172,7 @@
               <p>Сливочное с шоколадной стружкой</p>
             </a>
             <p class="price">320Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -117,6 +180,7 @@
               <p>Сливочно-ванильное с кусочками шоколада</p>
             </a>
             <p class="price">440Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -124,6 +188,7 @@
               <p>Сливочное с ментоловым сиропом</p>
             </a>
             <p class="price">435Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -131,6 +196,7 @@
               <p>Сливочное с кусочками черного шоколада</p>
             </a>
             <p class="price">355Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="catalog-item.html">
@@ -138,6 +204,7 @@
               <p>Сливочное с мятным сиропом</p>
             </a>
             <p class="price">420Р<span class="price-weight">/кг</span></p>
+            <a class="item-card" href="catalog-item.html">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -197,8 +264,24 @@
       <span class="order-button">Оформить заказ</span>
     </section>
 
-    <section class="modal modal-login">
-      <!-- Форма регистрации -->
+    <section class="modal modal-login" >
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="email">Электронная почта</label>
+          <input type="email" name="email" placeholder="Электронная почта" required>
+        </p>
+        <p>
+          <label class="visually-hidden" for="password">Пароль</label>
+          <input type="password" name="password" placeholder="Пароль" required>
+        </p>
+        <p>
+          <a href="restore.html">Забыли пароль?</a>
+          <a href="registration">Новая регистрация</a>
+        </p>
+        <p>
+          <button class="button" type="submit">Войти</button>
+        </p>
+      </form>
     </section>
   </body>
 </html>
