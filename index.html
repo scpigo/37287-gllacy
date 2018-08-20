@@ -27,9 +27,30 @@
   			<ul class="user-navigation">
           <li class="search">
             <button class="button search-button" aria-label="Поиск"></button>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="search">Поиск</label>
+              <input type="search" name="search" placeholder="Что ищем?">
+            </form>
           </li>
   				<li class="login">
-            <a class="login" href="login.html">Вход</a>   
+            <a class="login" href="login.html">Вход</a>  
+            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="email">Электронная почта</label>
+                <input type="email" name="email" placeholder="Электронная почта" required>
+             </p>
+             <p>
+               <label class="visually-hidden" for="password">Пароль</label>
+               <input type="password" name="password" placeholder="Пароль" required>
+              </p>
+              <p>
+               <a href="restore.html">Забыли пароль?</a>
+               <a href="registration">Новая регистрация</a>
+             </p>
+             <p>
+                <button class="button" type="submit">Войти</button>
+            </p>
+            </form>
           </li>
   				<li class="cart">
             <a class="cart" href="cart.html">Пусто</a>
@@ -194,33 +215,6 @@
   			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
   		</div>
   	</footer>
-
-  	<section class="modal modal-login" >
-  		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="visually-hidden" for="email">Электронная почта</label>
-          <input type="email" name="email" placeholder="Электронная почта" required>
-        </p>
-        <p>
-          <label class="visually-hidden" for="password">Пароль</label>
-          <input type="password" name="password" placeholder="Пароль" required>
-        </p>
-        <p>
-          <a href="restore.html">Забыли пароль?</a>
-          <a href="registration">Новая регистрация</a>
-        </p>
-        <p>
-          <button class="button" type="submit">Войти</button>
-        </p>
-      </form>
-  	</section>
-
-  	<section class="modal modal-search">
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-        <label class="visually-hidden" for="search">Поиск</label>
-  		  <input type="search" name="search" placeholder="Что ищем?">
-      </form>
-  	</section>
 
   	<section class="modal modal-feedback">
   		<p><b>Мы обязательно вам ответим!</b></p>
