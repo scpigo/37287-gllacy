@@ -204,10 +204,12 @@ a.selected {
 }
 
 .info-workinghour {
+  font-weight: bold
   font-size: 14px;
 }
 
 .info-phone {
+  font-weight: bold;
   font-size: 22px;
 }
 
@@ -236,6 +238,7 @@ a.selected {
 .stock-item {
   font-weight: bold;
   font-size: 18px;
+  line-height: 22px;
 }
 
 .stock-item h3 {
@@ -278,11 +281,14 @@ tr img {
   background: url("../img/waffle.jpg") left top repeat border-box;
   border-radius: 12px;
   color: #323232;
+  line-height: 22px;
 }
 
 .about-us h2 {
   font-size: 24px;
+  font-weight: 500;
   line-height: 30px;
+  
 }
 
 .news {
