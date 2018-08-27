@@ -14,7 +14,7 @@ a {
 }
 
 .site-navigation,
-.menu,
+.submenu,
 .user-navigation,
 .slider-list,
 .stock-list,
@@ -78,14 +78,11 @@ a {
 
 
 .button:hover,
-.button:focus,
-.item-card:hover,
-.item-card:focus {
+.button:focus {
   background-image: linear-gradient(0deg,rgb(245,134,105) 0%, rgb(236,111,94) 100%);
 }
 
-.button:active,
-.item-card:active {
+.button:active {
   background-image: linear-gradient(0deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   box-shadow: 0px -2px 2px 0px rgba(172, 16, 0, 0.64);
 }
@@ -134,30 +131,31 @@ a {
   text-decoration: underline;
 }
 
-.menu li a,
-.menu li a:hover,
-.menu li a:focus {
+.submenu a {
+  display: block;
+}
+
+.submenu a,
+.submenu a:hover,
+.submenu a:focus {
   font-weight: 500;
   text-decoration: none;
   font-size: 14px;
   color: #323232;
 }
 
-.menu li:hover,
-.menu li:focus {
+.submenu a:hover,
+.submenu a:focus {
   background-color: #fbded7;
 }
 
-.menu li:active {
+.submenu a:active {
   background-color: #f6b5a5;
 }
 
 
-.menu .selected {
-  background-color: #d07058;
-}
 
-.menu li:first-child a {
+.submenu .special {
   font-weight: bold;
 }
 
@@ -165,20 +163,25 @@ a.selected {
   text-decoration: none;
   background-color: #d07058;
   border-radius: 18px;
+  color: white;
 }
 
-.user-navigation; {
+.submenu .selected {
+  border-radius: 0;
+}
+
+.user-navigation {
   font-size: 14px;
-  font-weight: medium;
+  font-weight: 500;
 }
 
-.login-form p:nth-child(3) a {
+.login-form a {
   color: #323232;
   text-decoration: underline;
 }
 
-.login-form p:nth-child(3) a:hover,
-.login-form p:nth-child(3) a:focus {
+.login-form a:hover,
+.login-form a:focus {
   color: #e84d37;
 }
 
@@ -190,7 +193,12 @@ a.selected {
   background-color: rgba(255,255,255,0.2);
   border-radius: 18px;
   font-size: 14px;
-  font-weight: medium;
+  font-weight: 500;
+}
+
+a.cart-filled {
+  background-color: white;
+  color: #323232;
 }
 
 .search-button:hover,
@@ -204,7 +212,7 @@ a.selected {
   background-color: white;
   border-radius: 18px;
   font-size: 14px;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .site-navigation-menu > a:hover,
@@ -229,7 +237,7 @@ a.selected {
 }
 
 .info-workinghour {
-  font-weight: bold
+  font-weight: bold;
   font-size: 14px;
 }
 
@@ -280,11 +288,8 @@ a.selected {
   border-radius: 12px;
 }
 
-.catalog-item p {
-  font-weight: medium;
-}
-
-.catalog-item a p {
+.catalog-item a {
+  font-weight: 500;
   text-decoration: underline;
 }
 
@@ -293,7 +298,7 @@ a.selected {
   font-size: 45px;
 }
 
-.price_weight {
+.price-weight {
   font-size: 30px;
 }
 
@@ -340,9 +345,32 @@ tr img {
   color: #e84d37;
 }
 
+.news {
+  background: url("../img/strawberry.jpg") no-repeat;
+  border-radius: 14px;
+}
+
 .dispatch-text {
   color: #5a5a5a;
   line-height: 22px;
+}
+
+.dispatch {
+  position: relative;
+  background: /*url("../img/letter_front.jpg") no-repeat 5px 5px,*/
+              url("../img/letter.jpg") no-repeat;
+  border-radius: 15px;
+  padding: 5px;
+  z-index: -1;
+}
+
+.dispatch::before {
+  position: absolute;
+  width: 100%;
+  background: url("../img/letter_front.jpg") no-repeat;
+              /*url("../img/letter.jpg") no-repeat;*/
+  border-radius: 10px;
+  z-index: 1;
 }
 
 .map-adress {
@@ -353,7 +381,7 @@ tr img {
   color: #323232;
 }
 
-.map-adress p span {
+.map-adress span {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -390,7 +418,7 @@ tr img {
 .modal-feedback,
 .search-form,
 .login-form,
-.menu,
+.submenu,
 .cart-list {
   background-color: #f8f7f4;
   border-radius: 10px;
@@ -398,7 +426,7 @@ tr img {
 
 .search-form,
 .login-form,
-.menu,
+.submenu,
 .cart-list {
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -448,8 +476,6 @@ tr img {
 
 .filter-button:active {
   box-shadow: inset 0px 2px 1px 0px #696969;
-}
-
 }
 
 .breadcrumbs {
