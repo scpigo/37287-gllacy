@@ -9,6 +9,10 @@ body {
   background-color: #849d8f;
 }
 
+.background {
+  background: #849d8f url("../img/light_1.png") top center no-repeat;
+}
+
 a {
   text-decoration: none;
 }
@@ -234,8 +238,16 @@ a.cart-filled {
 }
 
 .slider {
-  background: url("../img/ice_cream_1.png") top center no-repeat,
-              url("../img/light_1.png") top center no-repeat;
+  position: relative;
+}
+
+.slider img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left:0;
+  right:0;
+  margin: 0 auto;
 }
 
 .slider-item {
@@ -357,7 +369,7 @@ tr img {
   left: -5px;
   width: 100%;
   height: 100%;
-  background-image: url("../img/letter.jpg");
+  background-image: url("../img/letter.png");
   border: 5px solid transparent;
   border-radius: 14px;
   background-origin: border-box;
@@ -522,16 +534,13 @@ tr img {
 
 .main-header {
   margin: 0 auto;
-  width: 900px;
+  width: 860px;
   min-height: 112px;
 }
 
 .main-navigation {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
-  margin: 0 20px;
   min-height: 72px;
 }
 
@@ -589,28 +598,19 @@ tr img {
 }
 
 .stock {
-  padding: 0;
+  margin-top: 19px;
 }
+
 .stock-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0;
-  margin-top: 19px;
+  justify-content: space-between;
   padding: 0;
+  margin: 0 20px;
 }
 
 .stock-item {
   width: 420px;
   height: 230px;
-}
-
-.stock-raspberry {
-  margin-left: 12px;
-}
-
-.stock-chocolate {
-  margin-right: 12px;
 }
 
 .catalog {
@@ -622,8 +622,8 @@ tr img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0;
-  padding: 0 20px;
+  margin: 0 20px;
+  padding: 0;
   flex-wrap: wrap;
 }
 
@@ -633,7 +633,7 @@ tr img {
   margin-bottom: 25px;
 }
 
-.catalog-item img:nth-child(2),
+.hot,
 .price {
   position: absolute;
   top: 0;
@@ -674,7 +674,6 @@ tr img {
 
 .map {
   position: relative;
-  width: 900px;
   height: 429px;
   margin-top: 40px;
   overflow: hidden;
@@ -694,7 +693,6 @@ tr img {
 
 .main-footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 860px;
   margin: 0 auto;
@@ -704,18 +702,15 @@ tr img {
 
 .footer-social {
   width: 185px;
-  margin-right: 70px;
 }
 
 .social-list {
   margin: 0;
-
   padding: 0;
 }
 
 .footer-links {
   width: 330px;
-  margin-right: 88px;
 }
 
 .breadcrumbs {
@@ -736,7 +731,6 @@ tr img {
 .filter {
   margin: 0 20px;
   margin-top: 25px;
-  width: 860px;
   min-height: 132px;
 }
 
