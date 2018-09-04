@@ -1045,14 +1045,14 @@ img {
 }
 
 .container {
-  width: 1200px;
+  min-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 27px;
+  padding: 0 2.25%;
+  box-sizing: border-box;
 }
 
 .main-header {
-  margin: 0 auto;
-  width: 1200px;
   min-height: 112px;
 }
 
@@ -1060,7 +1060,7 @@ img {
   display: flex;
   justify-content: flex-start;
   min-height: 72px;
-  margin: 0 27px;
+  
 }
 
 .navigation-logo {
@@ -1149,7 +1149,7 @@ img {
   position: relative;
   top: -4px;
   margin: 0 auto;
-  margin-right: 27px;
+  margin-right: 0;
   width: 170px;
   min-height: 40px;
   text-align: right;
@@ -1202,7 +1202,7 @@ img {
 .slider-controls {
   position: absolute;
   bottom: 25px;
-  left: 27px;
+  left: 0;
   font-size: 0;
 }
 
@@ -1220,12 +1220,11 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 0;
-  margin: 0 26px;
 }
 
 .stock-item {
   position: relative;
-  width: 560px;
+  width: 49%;
   min-height: 230px;
 }
 
@@ -1255,14 +1254,14 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 26px;
   padding: 0;
+  margin-bottom: 0;
   flex-wrap: wrap;
 }
 
 .catalog-item {
   position: relative;
-  width: 267px;
+  width: 23.2%;
   margin-bottom: 22px;
 }
 
@@ -1271,20 +1270,26 @@ img {
   margin-top: 5px;
 }
 
-.hot,
-.price {
+.catalog-item div {
+  position: relative;
+}
+
+.hot {
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
 }
 
 .price {
-  top: 160px;
+  position: absolute;
+  margin: 0;
+  height: 45px;
+  left: 0;
+  bottom: 10px;
 }
 
 .about-us {
   min-height: 306px;
-  margin: 0 26px;
 }
 
 .about-us h2 {
@@ -1306,7 +1311,7 @@ img {
 
 .about-us-elements li {
   position: relative;
-  width: 484px;
+  width: 40%/*484px*/;
   padding-left: 57px;
   margin: 10px 0;
 }
@@ -1355,7 +1360,6 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 26px;
   margin-top: 40px;
   min-height: 220px;
 }
@@ -1363,7 +1367,7 @@ img {
 .news,
 .dispatch {
   padding: 0;
-  width: 560px;
+  width: 49%;
 }
 
 .news-title {
@@ -1379,7 +1383,7 @@ img {
 }
 
 .dispatch {
-  width: 550px;
+  width: 48%;
 }
 
 .dispatch-text {
@@ -1399,7 +1403,7 @@ img {
 }
 
 .dispatch-form input {
-  width: 338px;
+  width: 40%;
   margin-left: 20px;
   padding: 12px 15px; 
 }
@@ -1414,6 +1418,10 @@ img {
   height: 429px;
   margin-top: 40px;
   overflow: hidden;
+}
+
+.map img {
+  height: 100%;
 }
 
 .map > p {
@@ -1448,8 +1456,6 @@ img {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  width: 1146px;
-  margin: 0 auto;
   margin-top: 15px;
   
 }
@@ -1513,9 +1519,9 @@ img {
 }
 
 .breadcrumbs {
+  padding: 0;
   margin: 0;
   margin-top: -15px;
-  padding-left: 27px;
 }
 
 .breadcrumbs li {
@@ -1532,12 +1538,10 @@ img {
 .title {
   margin: 0;
   margin-top: 5px;
-  padding-left: 27px;
   width: 879;
 }
 
 .filter {
-  padding: 0 27px;
   margin-top: 15px;
   min-height: 132px;
 }
@@ -1547,17 +1551,16 @@ img {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-}
-
-.filter-form fieldset {
   padding: 0;
   margin: 0;
 }
 
-.filter-form div {
+.filter-form fieldset {
+  margin-left: 0;
   margin-top: 10px;
   margin-bottom: 2px;
-  margin-right: 16px;
+  
+  padding: 0;
 }
 
 .filter-title {
@@ -1572,21 +1575,27 @@ img {
 .filter-sort .filter-section {
   width: 170px;
   padding: 8px 12px;
+  margin-right: 16px;
 }
 
-.filter-price .filter-section {
-  width: 176px;
+.filter-price {
+  width: 213px;
   padding: 8px 22px;
+  margin-right: 16px;
 }
+
+.filter-price .filter
+padding: 0 22px;
 
 .filter-fat .filter-section {
-  width: 385px;
+  width: 380px;
   padding: 7px 15px;
 }
 
 .filter-fill .filter-section {
   width: 671px;
   padding: 8px 16px;
+  margin-right: 14px;
 }
 
 .filter-section select {
@@ -1600,6 +1609,7 @@ img {
   height: 20px;
   margin: 0;
   margin-top: 5px;
+  padding: 0 22px;
   padding-top: 16px;
   padding-bottom: 0;
 }
@@ -1673,7 +1683,7 @@ img {
 
 .filter-button {
   height: 36px;
-  padding: 0 30px;
+  padding: 0 26px;
   margin-top: 28px;
 }
 
@@ -1682,7 +1692,6 @@ img {
   margin-top: 53px;
   margin-bottom: 20px;
   margin-left: auto;
-  margin-right: 20px;
   width: 184px;
 }
 
@@ -1691,6 +1700,7 @@ img {
   display: inline-block;
   vertical-align: bottom;
   text-align: center;
+  line-height: 26px;
   width: 27px;
   height: 26px;
 }

@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="catalog-background">
-    <header class="main-header">
+    <header class="container main-header">
       <nav class="main-navigation">
         <a href="index.html" class="navigation-logo">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина">
@@ -103,8 +103,7 @@
 
       <section class="filter">
         <form class="form filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <div class="filter-sort">
-            <fieldset>
+            <fieldset class="filter-sort">
               <legend class="filter-title">Сортировка:</legend>
               <div class="filter-section">
                 <select name="sort">
@@ -115,9 +114,8 @@
                 </select>
               </div>
             </fieldset>
-          </div>
-          <div class="filter-price">
-            <fieldset>
+
+            <fieldset class="filter-price">
               <legend class="filter-title">Цена:</legend>
                 <div class="price-controls">
                   <label class="min-price"><input name="min-price" type="text" value="100">руб. –</label>
@@ -129,13 +127,10 @@
                   </div>
                   <div class="toggle toggle-min"></div>
                   <div class="toggle toggle-max"></div>
-               
-
-              </div>
+                </div>
             </fieldset>
-          </div>
-          <div class="filter-fat">
-            <fieldset>
+
+            <fieldset class="filter-fat">
               <legend class="filter-title">Жирность:</legend>
               <div class="filter-section">
                 <label>
@@ -152,9 +147,8 @@
                </label>
              </div>
             </fieldset>
-          </div>
-          <div class="filter-fill">
-            <fieldset>
+
+            <fieldset class="filter-fill">
               <legend class="filter-title">Наполнители:</legend>
               <div class="filter-section">
                <label>
@@ -174,7 +168,7 @@
                 </label>
               </div>
             </fieldset>
-          </div>
+
           <button class="button filter-button" type="submit">Применить</button>
         </form>
       </section>
@@ -184,62 +178,79 @@
         <ul class="catalog-list">
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/1.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/1.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">310₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
             </a>
-            <p class="price">310₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/2.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/2.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">380₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочно-кофейное с кусочками шоколада</p>
             </a>
-            <p class="price">380₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/3.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/3.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">355₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
             </a>
-            <p class="price">355₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/4.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/4.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">415₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочное крем-брюле с карамельной подливкой</p>
             </a>
-            <p class="price">415₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/5.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/5.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">325₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочное с брусничным джемом</p>
             </a>
-            <p class="price">325₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/6.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/6.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">410₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочно-черничное с цельными ягодами черники</p>
             </a>
-            <p class="price">410₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/7.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/7.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">375₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочно-лимонное с карамельной присыпкой</p>
             </a>
-            <p class="price">375₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/8.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/8.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">320₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочное с шоколадной стружкой</p>
             </a>
             <p class="price">320₽<span class="price-weight">/кг</span></p>
@@ -247,34 +258,42 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/9.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/9.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">440₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочно-ванильное с кусочками шоколада</p>
             </a>
-            <p class="price">440₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/10.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/10.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">435₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочное с ментоловым сиропом</p>
             </a>
-            <p class="price">435₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/11.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/11.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">355₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочное с кусочками черного шоколада</p>
             </a>
-            <p class="price">355₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/item_icons/12.png" width="267" height="267" alt="Изображение товара">
+              <div>
+                <img src="img/item_icons/12.png" width="267" height="267" alt="Изображение товара">
+                <p class="price">420₽<span class="price-weight">/кг</span></p>
+              </div>
               <p>Сливочное с мятным сиропом</p>
             </a>
-            <p class="price">420₽<span class="price-weight">/кг</span></p>
             <button class="button visually-hidden" type="button">Быстрый просмотр</button>
           </li>
         </ul>
@@ -295,7 +314,7 @@
         <a class="pagination-item" href="#">4</a>
         <a class="pagination-item" href="#">5</a>
         <a class="paginator-arrow arrow-right">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
             <path fill="#f8f9f8" d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15
             c-0.198,0.198-0.198,0.519,0,0.717c0.099,0.099,0.229,0.148,0.358,0.148c0.129,0,0.259-0.05,0.358-0.148l5.509-5.509
@@ -305,11 +324,11 @@
       </div>
     </main>
 
-    <footer class="main-footer border-footer">
+    <footer class="container main-footer border-footer">
       <div class="footer-social">
         <ul class="social-list">
           <li><a class="social-button" href="#">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
               <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.164,0,16c0,8.837,7.164,16,16,16c8.837,0,16-7.163,16-16C32,7.164,24.837,0,16,0z
               M23.944,12.809c-0.251,6.516-3.463,10.832-10.992,10.702c-0.14,0-0.205,0-0.233,0c-0.015,0-0.021,0-0.021,0
               c-0.029,0-0.094,0-0.232,0c-0.447,0-4.543-0.443-5.344-1.823c2.479,0.19,4.247-0.406,5.12-1.136
@@ -320,7 +339,7 @@
             </svg>    
           </a></li>
           <li><a class="social-button" href="#">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
               <path fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
               h-0.897v6.838h11.396V14.86h-0.897C20.865,15.227,20.916,15.606,20.916,16z"/>
@@ -333,14 +352,14 @@
             </svg>    
           </a></li>
           <li><a class="social-button" href="#">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
               <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
               v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
             </svg>
           </a></li>
           <li><a class="social-button" href="#">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
               <path fill="#FFFFFF" d="M16.637,14.495c0.402-0.019,0.719-0.082,0.951-0.188c0.326-0.145,0.54-0.33,0.641-0.559
               c0.101-0.229,0.15-0.496,0.15-0.797c0-0.232-0.058-0.465-0.174-0.697c-0.116-0.232-0.322-0.405-0.617-0.517
