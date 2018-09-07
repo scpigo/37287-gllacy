@@ -127,6 +127,7 @@ a {
 
 .submenu a {
   display: block;
+  margin: 0;
 }
 
 .submenu a,
@@ -440,7 +441,7 @@ tr img {
   text-decoration: underline;
 }
 
-.modal-feedback,
+.modal,
 .search-form,
 .login-form,
 .submenu,
@@ -457,8 +458,10 @@ tr img {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
-.modal-feedback b {
+.modal b {
   color: #323232;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .cart-list {
@@ -541,8 +544,7 @@ tr img {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="radio"].visually-hidden,
-.modal {
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -1084,7 +1086,6 @@ img {
 .site-navigation a {
   display: block;
   padding: 8px 13px;
-  margin-right: 1px;
 }
 
 .user-navigation {
@@ -1122,6 +1123,11 @@ img {
   background: url("../img/login.svg") no-repeat 0 0;
 }
 
+.login-button:hover::before,
+.login-button:focus::before {
+  background: url("../img/login_black.svg") no-repeat 0 0;
+}
+
 .cart-button::before {
   content: "";
   position: absolute;
@@ -1132,17 +1138,27 @@ img {
   background: url("../img/cart.svg") no-repeat 0 0;
 }
 
+.cart-button:not(.cart-filled):hover::before,
+.cart-button:not(.cart-filled):focus::before {
+  background: url("../img/cart_black.svg") no-repeat 0 0;
+}
+
 .cart-filled::before {
   background: url("../img/cart_filled.svg") no-repeat 0 0;
 }
 
-.search-button{
+.search-button {
   padding: 7px 7px;
   padding-left: 7px;
 }
 
-.search-button img {
+.search-button svg {
   vertical-align: middle;
+}
+
+.search-button:hover path,
+.search-button:focus path {
+  fill: black;
 }
 
 .main-header-info {
@@ -1612,18 +1628,25 @@ img {
   margin-right: 16px;
 }
 
-.filter-price .filter
-padding: 0 22px;
-
 .filter-fat .filter-section {
   width: 380px;
   padding: 7px 15px;
+  padding-bottom: 11px;
+}
+
+.filter-fat label {
+  margin-right: 15px;
 }
 
 .filter-fill .filter-section {
   width: 671px;
   padding: 8px 16px;
+  padding-bottom: 10px;
   margin-right: 14px;
+}
+
+.filter-fill label {
+  margin-right: 18px;
 }
 
 .filter-section select {
@@ -1631,6 +1654,11 @@ padding: 0 22px;
   border: none;
   background: none;
   color: white;
+}
+
+.filter-section select:hover,
+.filter-section select:focus {
+  color: #323232;
 }
 
 .filter-price .range-controls {
@@ -1712,7 +1740,7 @@ padding: 0 22px;
 .filter-button {
   height: 36px;
   padding: 0 26px;
-  margin-top: 28px;
+  margin-top: 33px;
 }
 
 .pagination-list {
@@ -1752,4 +1780,242 @@ padding: 0 22px;
 .border-footer {
   border-top: 1px solid rgba(255,255,255,0.3);
   padding-top: 15px;
+}
+
+.site-navigation-menu,
+.search,
+.login,
+.cart {
+  position: relative;
+}
+
+.submenu,
+.search-form,
+.login-form,
+.cart-list {
+  display: none;
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+}
+
+.submenu {
+  box-sizing: border-box;
+  padding: 4px 0;
+  width: 143px;
+}
+
+.submenu a {
+  padding-left: 19px;
+}
+
+.submenu .special {
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.submenu .special::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 6px;
+  width: 90%;
+  height: 1px;
+  background-color: rgba(53,53,53,0.2);
+}
+
+.search-form {
+  padding: 20px 15px;
+  right: 0;
+}
+
+.search-form input {
+  width: 281px;
+  padding: 11px 15px;
+}
+
+.login-form {
+  padding: 20px 18px;
+  right: 0;
+}
+
+.login-form input {
+  width: 211px;
+  padding: 11px 15px;
+  margin-bottom: 20px;
+}
+
+.login-flex {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 45px;
+}
+
+.login-flex button {
+  padding: 12px 24px;
+}
+
+.login-flex-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-flex-inner a {
+  padding: 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.cart-list {
+  padding: 15px 15px;
+  right: 0;
+}
+
+.cart-list table {
+  width: 510px;
+  border-bottom: 1px solid #cacac7;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.cart-list td {
+  height: 45px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+.cart-remove {
+  width: 11px;
+  
+}
+
+.cart-icon {
+  width: 61px;
+}
+
+.cart-item {
+  width: 234px;
+}
+
+.cart-cost {
+  width: 120px;
+}
+
+.cart-total {
+  width: 85px;
+}
+
+.item-remove {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  font-size: 0;
+  background: url("../img/cross_small.svg");
+  border: 0;
+}
+
+.cart-list p {
+  text-align: right;
+}
+
+.cart-list .order-button {
+  padding: 10px 15px;
+  margin-right: 0;
+  margin-left: auto;
+  width: 142px;
+}
+
+.site-navigation-menu:first-child:hover .submenu,
+.search:hover .search-form,
+.login:hover .login-form,
+.cart:hover .cart-list {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 328px;
+  left: 50%;
+  width: 429px;
+  margin-left: -238px;
+  padding: 18px 24px;
+  padding-bottom: 25px;
+}
+
+.modal::before {
+  content: "";
+  background-color: rgba(0,0,0,0.3);
+}
+
+.modal p {
+  margin: 0;
+}
+
+.modal .modal-title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.feedback-form input {
+  width: 236px;
+  padding: 0 14px;
+  padding-top: 12px;
+  padding-bottom: 9px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.feedback-form textarea {
+  width: 400px;
+  height: 135px;
+  padding: 10px 14px;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.feedback-form button {
+  padding: 12px 24px;
+  float: right;
+  
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 18px;
+  height: 17px;
+  font-size: 0;
+  background: url("../img/cross.svg");
+  border: 0;
+  cursor: pointer;
+}
+
+.filter-checkbox,
+.filter-radio {
+  position: relative;
+
+  padding-left: 30px;
+
+  cursor: pointer;
+}
+
+.filter-checkbox svg,
+.filter-radio svg {
+  transform: scale(0.85);
+}
+
+.filter-checkbox input[type="checkbox"] + .checkbox-indicator,
+.filter-radio input[type="radio"] + .radio-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator path {
+  d: path('M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z');
 }
