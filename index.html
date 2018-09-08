@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body class="background">
+  <body class="background background-1">
 
     <header class="container main-header">
   	 <nav class="main-navigation">
@@ -73,26 +73,26 @@
   		<h1 class="visually-hidden">Интернет-магазин мороженного Глейси</h1>
   		<section class="slider">
   			<h2 class="visually-hidden">Промо</h2>
-        <input class="visually-hidden" type="radio" id="btn-1" name="toggle" checked>
-        <input class="visually-hidden" type="radio" id="btn-2" name="toggle">
-        <input class="visually-hidden" type="radio" id="btn-3" name="toggle">
+        <input class="slider-radio-1 visually-hidden" type="radio" id="btn-1" name="toggle" checked>
+        <input class="slider-radio-2 visually-hidden" type="radio" id="btn-2" name="toggle">
+        <input class="slider-radio-3 visually-hidden" type="radio" id="btn-3" name="toggle">
         <div class="slider-controls">
             <label for="btn-1">Первый</label>
             <label for="btn-2">Второй</label>
             <label for="btn-3">Третий</label>
           </div>
   			<ul class="slider-list">
-  				<li class="slider-item">
+  				<li class="slider-item slider-item-1">
             <img src="img/ice_cream_1.png" alt="Крем-брюле и пломбир">
   					<p class="slider-description"><b>Крем-брюле и пломбир с малиновым джемом</b></p>
   					<a class="button" href="#">Давайте оба!</a>
   				</li>
-  				<li class="slider-item visually-hidden">
+  				<li class="slider-item slider-item-2 slider-hide">
             <img src="img/ice_cream_2.png" alt="Шоколадный пломбир и сорбет">
   					<p class="slider-description"><b>Шоколадный пломбир и лимонный сорбет</b></p>
   					<a class="button" href="#">Давайте оба!</a>
   				</li>
-  				<li class="slider-item visually-hidden">
+  				<li class="slider-item slider-item-3 slider-hide">
             <img src="img/ice_cream_3.png" alt="Пломбир и клубничный сорбет">
   					<p class="slider-description"><b>Пломбир с помадкой и клубничный щербет</b></p>
   					<a class="button" href="#">Давайте оба!</a>
@@ -212,12 +212,13 @@
 
     <section class="map">
         <h2 class="visually-hidden">Карта и адрес</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="100%" height="429" allowfullscreen></iframe>
         <p>
-          <img src="img/map.jpg" width="1250" height="640" alt="Главный офис и офлайн-магазин по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">   
+          <img class="map-image" src="img/map.jpg" width="1250" height="640" alt="Главный офис и офлайн-магазин по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">   
         </p>
         <div class="map-adress-absolute">
           <div class="container map-adress-relative">
-            <div class=" map-adress">
+            <div class="map-adress">
               <p>
                 Адреса главного офиса и офлайн-магазина:<br>
                 <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
@@ -314,5 +315,63 @@
       </form>
   		<button class="modal-close" type="button">Закрыть</button>
   	</section>
-  </body>
+
+    <div class="modal-overlay"></div>
+
+    <script>
+      var link = document.querySelector(".map-adress .button");
+      var popup = document.querySelector(".modal");
+      var overlay = document.querySelector(".modal-overlay");
+      var close = document.querySelector(".modal-close");
+        
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal-show");
+        overlay.classList.add("overlay-show");
+      });
+        
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        overlay.classList.remove("overlay-show");
+      });
+
+
+
+      var background = document.querySelector(".background");
+      var radio1 = document.querySelector(".slider-radio-1");
+      var radio2 = document.querySelector(".slider-radio-2");
+      var radio3 = document.querySelector(".slider-radio-3");
+      var slider1 = document.querySelector(".slider-item-1");
+      var slider2 = document.querySelector(".slider-item-2");
+      var slider3 = document.querySelector(".slider-item-3");
+
+      radio1.addEventListener("click", function (evt) {
+        background.classList.remove("background-2");
+        background.classList.remove("background-3");
+        background.classList.add("background-1");
+        slider1.classList.remove("slider-hide");
+        slider2.classList.add("slider-hide");
+        slider3.classList.add("slider-hide");
+      });
+
+      radio2.addEventListener("click", function (evt) {        
+        background.classList.remove("background-1");
+        background.classList.remove("background-3");
+        background.classList.add("background-2");
+        slider1.classList.add("slider-hide");
+        slider2.classList.remove("slider-hide");
+        slider3.classList.add("slider-hide");
+      });
+
+      radio3.addEventListener("click", function (evt) {        
+        background.classList.remove("background-2");
+        background.classList.remove("background-1");
+        background.classList.add("background-3");
+        slider1.classList.add("slider-hide");
+        slider2.classList.add("slider-hide");
+        slider3.classList.remove("slider-hide");
+      });
+
+    </script>
 </html>
