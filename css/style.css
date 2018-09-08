@@ -93,7 +93,7 @@ a {
   box-shadow: 0px -2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
-.form input[type="text"],
+.form input[type="text"]:not(.price-input),
 .form input[type="search"],
 .form input[type="email"],
 .form input[type="password"],
@@ -105,7 +105,7 @@ a {
 }
 
 
-.form input[type="text"]:hover,
+.form input[type="text"]:not(.price-input):hover,
 .form input[type="search"]:hover,
 .form input[type="email"]:hover,
 .form input[type="password"]:hover,
@@ -114,7 +114,7 @@ a {
   box-shadow: inset 0 0 0 1px #c7c6c5;
 }
 
-.form input[type="text"]:focus,
+.form input[type="text"]:not(.price-input):focus,
 .form input[type="search"]:focus,
 .form input[type="email"]:focus,
 .form input[type="password"]:focus,
@@ -2045,18 +2045,62 @@ img {
   cursor: pointer;
 }
 
-.filter-checkbox svg,
-.filter-radio svg {
-  transform: scale(0.85);
+.radio-indicator::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 14px;
+  height: 14px;
+  border: 4px solid rgba(255,255,255,0.8);
+  border-radius: 50%;
 }
 
-.filter-checkbox input[type="checkbox"] + .checkbox-indicator,
-.filter-radio input[type="radio"] + .radio-indicator {
+.filter-radio input[type="radio"]:hover + .radio-indicator::before {
+  border: 4px solid rgba(255,255,255,1);
+}
+
+.filter-radio input[type="radio"]:checked + .radio-indicator::before {
+  border: 4px solid rgba(255,255,255,1);
+}
+
+.filter-radio input[type="radio"]:checked + .radio-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.checkbox-indicator {
   position: absolute;
   top: 0;
   left: 0;
+  width: 24px;
+  height: 20px;
+  opacity: 0.8;
 }
 
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator path {
-  d: path('M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z');
+.checkbox-indicator-checked {
+  display: none;
+}
+
+.filter-checkbox input[type="checkbox"]:hover + .checkbox-indicator {
+  opacity: 1;
+}
+
+.filter-checkbox input[type="checkbox"]:checked + .checkbox-indicator-unchecked {
+  display: none;
+}
+
+.filter-checkbox input[type="checkbox"]:checked ~ .checkbox-indicator-checked {
+  display: block;
+  opacity: 1;
+}
+
+.filter-checkbox input[type="checkbox"],
+.filter-radio input[type="radio"] {
+  display: none;
 }
