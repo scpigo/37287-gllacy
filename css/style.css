@@ -1332,29 +1332,22 @@ img {
 }
 
 .filter-sort .filter-section {
+  position: relative;
   width: 170px;
   padding: 8px 12px;
   margin-right: 16px;
 }
 
-.filter-sort {
-  position: relative;
-}
-
-.filter-triangle {
+.filter-sort .filter-section::before {
+  content: "";
   position: absolute;
-  top: 45px;
-  right: 25px;
+  top: 12px;
+  right: 10px;
   -webkit-transform: scaleX(0.55);
       -ms-transform: scaleX(0.55);
           transform: scaleX(0.55);
-}
-
-.filter-triangle::before {
-  content: "";
   border: 11px solid transparent; 
   border-top: 10px solid white;
-  
 }
 
 .filter-sort select {
@@ -1866,6 +1859,11 @@ img {
   padding-left: 30px;
 
   cursor: pointer;
+}
+
+.radio-indicator {
+  position: relative;
+  left: -30px;
 }
 
 .radio-indicator::before {
