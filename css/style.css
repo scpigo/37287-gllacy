@@ -1693,7 +1693,8 @@ top: 0;
   width: 109.72%;
   min-height: 353px;
   height: 100%;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   padding-bottom: 60px;
   z-index: -1;
 }
