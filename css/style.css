@@ -862,14 +862,14 @@ img {
 .stock-item p {
   margin: 0;
   padding: 0 20px;
+  padding-bottom: 90px;
 }
 
 .stock-item .button {
-  display: inline-block;
+  position: absolute;
   padding: 11px 22px; 
-  margin-top: 45px;
-  float: right;
-  margin-right: 20px;
+  right: 20px;
+  bottom: 25px;
 }
 
 .catalog {
