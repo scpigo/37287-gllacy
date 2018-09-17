@@ -567,7 +567,7 @@ a.cart-filled {
 }
 
 .filter-title {
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .catalog-item:hover::before {
@@ -873,7 +873,7 @@ img {
 }
 
 .catalog {
-  margin-top: 40px;
+  margin-top: 35px;
   min-height: 277px;
 }
 
@@ -1298,7 +1298,7 @@ text-decoration: underline;
 .filter-form fieldset {
   margin-left: 0;
   margin-top: 12px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   margin-right: 5px;
   
   padding: 0;
@@ -1357,18 +1357,23 @@ text-decoration: underline;
 }
 
 .filter-fat .filter-section {
-  padding: 7px 15px;
+  padding: 10px 15px 5px;
 }
 
 .filter-fat label {
   margin-right: 15px;
+  line-height: 22px;
+}
+
+.filter-fat label:last-child {
+  margin-right:3px
 }
 
 .filter-fill .filter-section {
-  padding: 8px 12px;
+  padding: 8px 15px;
   padding-bottom: 10px;
-  padding-right: 0;
-  margin-right: 14px;
+  padding-right: 3px;
+  margin-right: 10px;
 }
 
 .filter-fill label {
@@ -1399,6 +1404,7 @@ text-decoration: underline;
 .filter-form .filter-price { 
   position: relative; 
   padding-top: 17px; 
+  margin-right: 15px;
 }
 
 .filter-price .filter-title { 
@@ -1485,11 +1491,11 @@ text-decoration: underline;
       -ms-flex-pack: justify;
       justify-content: space-between;
   position: relative;
-  right: -15px;
-  margin-top: 45px;
-  margin-bottom: 30px;
+  right: -7px;
+  margin-top: 41px;
+  margin-bottom: 28px;
   margin-left: auto;
-  width: 180px;
+  width: 175px;
 }
 
 .pagination-item,
@@ -1850,7 +1856,7 @@ text-decoration: underline;
 
 .filter-checkbox {
   position: relative;
-  padding-left: 30px;
+  padding-left: 33px;
 }
 
 .radio-indicator { 
@@ -1861,10 +1867,7 @@ text-decoration: underline;
   width: 14px; 
   vertical-align: top; 
   position: relative; 
-}
-
-.radio-indicator::before { 
-
+  margin-right: 5px;
 }
 
 .filter-radio input[type="radio"]:hover + .radio-indicator {
