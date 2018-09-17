@@ -358,7 +358,7 @@ a.cart-filled {
 }
 
 .catalog-item img,
-tr img {
+.cart-image {
   border-radius: 50%;
 }
 
@@ -573,6 +573,7 @@ tr img {
 .catalog-item:hover::before {
   background-color: rgba(255,255,255,0.2);
   border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .pagination-item {
@@ -716,12 +717,12 @@ img {
   height: 19px;
   top: 6px;
   left: 16px;
-  background: #9db2a6 url("../img/login.svg") no-repeat 0 0;
+  background: url("../img/login.svg") no-repeat 0 0;
 }
 
 .login-button:hover::before,
 .login-button:focus::before {
-  background: #9db2a6 url("../img/login_black.svg") no-repeat 0 0;
+  background: url("../img/login_black.svg") no-repeat 0 0;
 }
 
 .cart-button::before {
@@ -731,7 +732,7 @@ img {
   height: 20px;
   top: 6px;
   left: 16px;
-  background: #9db2a6 url("../img/cart.svg") no-repeat 0 0;
+  background: url("../img/cart.svg") no-repeat 0 0;
 }
 
 .cart-button:not(.cart-filled):hover::before,
@@ -740,7 +741,7 @@ img {
 }
 
 .cart-filled::before {
-  background: #f8f7f4 url("../img/cart_filled.svg") no-repeat 0 0;
+  background: url("../img/cart_filled.svg") no-repeat 0 0;
 }
 
 .search-button {
@@ -1215,8 +1216,9 @@ margin-top: 0;
 .links-list li {
   display: inline-block;
   margin-bottom: 10px;
-  min-width: 120px;
+  min-width: 130px;
   margin-right: 15px;
+  line-height: 12px;
 }
 
 .links-list a {
@@ -1316,7 +1318,7 @@ text-decoration: underline;
   position: relative;
   width: 170px;
   padding: 8px 12px;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 
 .filter-sort .filter-section::before {
@@ -1345,14 +1347,14 @@ text-decoration: underline;
   display: none;
 }
 
-.filter-sort select:hover + .filter-triangle::before {
-  border: 11px solid transparent; border-top: 11px solid black;
+.filter-sort select:hover + .filter-section::before {
+  border: 11px solid transparent; border-top: 10px solid black;
 }
 
 .filter-price {
-  width: 213px;
+  width: 217px;
   padding: 8px 22px;
-  margin-right: 16px;
+  margin-right: 13px;
 }
 
 .filter-fat .filter-section {
@@ -1364,13 +1366,14 @@ text-decoration: underline;
 }
 
 .filter-fill .filter-section {
-  padding: 8px 16px;
+  padding: 8px 12px;
   padding-bottom: 10px;
+  padding-right: 0;
   margin-right: 14px;
 }
 
 .filter-fill label {
-  margin-right: 18px;
+  margin-right: 19px;
 }
 
 .filter-section select {
@@ -1395,13 +1398,13 @@ text-decoration: underline;
 }
 
 .filter-form .filter-price { 
-position: relative; 
-padding-top: 17px; 
+  position: relative; 
+  padding-top: 17px; 
 }
 
 .filter-price .filter-title { 
-position: absolute; 
-top: 0; 
+  position: absolute; 
+  top: 0; 
 }
 
 .range-controls .scale {
@@ -1469,7 +1472,7 @@ top: 0;
 
 .filter-button {
   height: 36px;
-  padding: 0 26px;
+  padding: 0 30px;
   margin-top: 33px;
 }
 
@@ -1850,13 +1853,13 @@ top: 0;
 }
 
 .radio-indicator { 
-border: 4px solid rgba(255,255,255,0.8); 
-border-radius: 50%; 
-display: inline-block; 
-height: 14px; 
-width: 14px; 
-vertical-align: top; 
-position: relative; 
+  border: 4px solid rgba(255,255,255,0.8); 
+  border-radius: 50%; 
+  display: inline-block; 
+  height: 14px; 
+  width: 14px; 
+  vertical-align: top; 
+  position: relative; 
 }
 
 .radio-indicator::before { 
@@ -1882,6 +1885,11 @@ position: relative;
   left: 3px; 
 }
 
+.filter-radio input[type="radio"]:disabled + .radio-indicator,
+.filter-radio input[type="radio"]:disabled + .radio-indicator::before {
+  opacity: 0.4
+}
+
 .checkbox-indicator {
   position: absolute;
   top: 0;
@@ -1889,6 +1897,7 @@ position: relative;
   width: 24px;
   height: 20px;
   opacity: 0.8;
+  transform: scale(0.85);
 }
 
 .checkbox-indicator-checked {
@@ -1906,6 +1915,11 @@ position: relative;
 .filter-checkbox input[type="checkbox"]:checked ~ .checkbox-indicator-checked {
   display: block;
   opacity: 1;
+}
+
+.filter-checkbox input[type="checkbox"]:disabled + .checkbox-indicator-unchecked,
+.filter-checkbox input[type="checkbox"]:disabled ~ .checkbox-indicator-checked {
+  opacity: 0.4;
 }
 
 .filter-checkbox input[type="checkbox"],
