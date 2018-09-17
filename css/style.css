@@ -877,6 +877,10 @@ img {
   min-height: 277px;
 }
 
+.catalog-margin {
+  margin-top: 40px 
+}
+
 .catalog-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -920,7 +924,7 @@ img {
 
 .catalog-item .item-button {
   display: none;
-  padding: 11px 18px;
+  padding: 11px 15px;
 }
 
 .catalog-item:hover {
@@ -1095,7 +1099,7 @@ img {
 
 .map {
   position: relative;
-  height: 429px;
+  height: 427px;
   margin-top: 40px;
   overflow: hidden;
 }
@@ -1356,6 +1360,10 @@ text-decoration: underline;
   margin-right: 13px;
 }
 
+.filter-fat {
+  margin-right: 0;
+}
+
 .filter-fat .filter-section {
   padding: 10px 15px 5px;
 }
@@ -1377,7 +1385,7 @@ text-decoration: underline;
 }
 
 .filter-fill label {
-  margin-right: 19px;
+  margin-right: 17px;
 }
 
 .filter-section select {
@@ -1481,6 +1489,7 @@ text-decoration: underline;
   height: 36px;
   padding: 0 30px;
   margin-top: 33px;
+  margin-right: -3px;
 }
 
 .pagination-list {
