@@ -166,13 +166,23 @@ a {
   font-weight: normal;
 }
 
+.underline {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.underline-black {
+  border-bottom: 2px solid #323232;
+}
+
 .site-navigation-menu > a {
   font-weight: bold;
-  text-decoration: underline;
+  padding: 8px 14px;
+  /*text-decoration: underline;*/
 }
 
 .submenu a {
   display: block;
+  padding: 8px 14px;
   margin: 0;
 }
 
@@ -216,7 +226,7 @@ a.selected {
 
 .login-form a {
   color: #323232;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .login-form a:hover,
@@ -344,7 +354,7 @@ a.cart-filled {
 .catalog-item a {
   font-weight: 500;
   line-height: 22px;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .price {
@@ -386,7 +396,7 @@ a.cart-filled {
   color: #353535;
   font-size: 24px;
   line-height: 30px;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   background-color: rgba(255,255,255,0.8);
 }
 
@@ -482,7 +492,7 @@ a.cart-filled {
 }
 
 .footer-copyright a {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .modal,
@@ -563,7 +573,7 @@ a.cart-filled {
 }
 
 .breadcrumbs a:not(.breadcrumbs-current) {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .filter-title {
@@ -586,10 +596,18 @@ a.cart-filled {
   border-radius: 50%;
 }
 
-.pagination-item:hover {
+.pagination-item:hover,
+.pagination-item:focus {
   background-color: rgba(255,255,255,0.2);
   border-radius: 50%;
 }
+
+.pagination-item:active {
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+}
+
 
 .visually-hidden:not(:focus):not(:active),
 input[type="radio"].visually-hidden {
@@ -676,7 +694,6 @@ img {
 
 .site-navigation a {
   display: block;
-  padding: 8px 14px;
 }
 
 .user-navigation {
@@ -1225,7 +1242,7 @@ margin-top: 0;
 }
 
 .links-list a {
-text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .heart {
@@ -1269,7 +1286,7 @@ text-decoration: underline;
 }
 
 .breadcrumbs a {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .title {
@@ -1350,22 +1367,18 @@ text-decoration: underline;
   display: none;
 }
 
-.filter-sort select:hover + .filter-section::before {
-  border: 11px solid transparent; border-top: 10px solid black;
-}
-
 .filter-price {
   width: 217px;
   padding: 8px 22px;
   margin-right: 13px;
 }
 
-.filter-fat {
+.filter-form .filter-fat {
   margin-right: 0;
 }
 
 .filter-fat .filter-section {
-  padding: 10px 15px 5px;
+  padding: 8px 15px 7px;
 }
 
 .filter-fat label {
@@ -1374,7 +1387,7 @@ text-decoration: underline;
 }
 
 .filter-fat label:last-child {
-  margin-right:3px
+  margin-right: 3px;
 }
 
 .filter-fill .filter-section {
@@ -1393,11 +1406,20 @@ text-decoration: underline;
   border: none;
   background: none;
   color: white;
+  cursor: pointer;
 }
 
-.filter-section select:hover,
-.filter-section select:focus {
+.filter-select {
+  cursor: pointer;
+}
+
+.filter-select:hover select,
+.filter-select:focus select {
   color: #323232;
+}
+
+.filter-select:hover::before {
+  border: 11px solid transparent; border-top: 10px solid black;
 }
 
 .filter-price .range-controls {
@@ -1898,9 +1920,9 @@ text-decoration: underline;
   left: 3px; 
 }
 
-.filter-radio input[type="radio"]:disabled + .radio-indicator,
-.filter-radio input[type="radio"]:disabled + .radio-indicator::before {
-  opacity: 0.4
+.filter-radio input[type="radio"]:disabled + .radio-indicator {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .checkbox-indicator {
@@ -1933,6 +1955,7 @@ text-decoration: underline;
 .filter-checkbox input[type="checkbox"]:disabled + .checkbox-indicator-unchecked,
 .filter-checkbox input[type="checkbox"]:disabled ~ .checkbox-indicator-checked {
   opacity: 0.4;
+  cursor: default;
 }
 
 .filter-checkbox input[type="checkbox"],

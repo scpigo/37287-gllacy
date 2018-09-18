@@ -6,8 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/js.js"></script>
+    <link href="css/style_minified.css" rel="stylesheet">
   </head>
 
   <body class="background background-1">
@@ -17,7 +16,7 @@
   			<a class="navigation-logo"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина"></a>
 			  <ul class="site-navigation">
 				  <li class="site-navigation-menu">
-				  	<a href="#">Каталог</a>
+				  	<a href="#"><span class="underline">Каталог</span></a>
 				  	<ul class="submenu">
 					 	  <li><a class="special" href="#">Новинки</a></li>
 						  <li><a href="catalog_cream.html">Сливочное</a></li>
@@ -26,8 +25,8 @@
 						  <li><a href="#">Мелорин</a></li>
 				  	</ul>
 				  </li>
-				  <li class="site-navigation-menu"><a href="#">Доставка и оплата</a></li>
-				  <li class="site-navigation-menu"><a href="#">О Компании</a></li>
+				  <li class="site-navigation-menu"><a href="#"><span class="underline">Доставка и оплата</span></a></li>
+				  <li class="site-navigation-menu"><a href="#"><span class="underline">О Компании</span></a></li>
 			  </ul>
 			  <ul class="user-navigation">
           <li class="search">
@@ -126,7 +125,7 @@
                 <p class="price">310₽<span class="price-weight">/кг</span></p>
               </div>
               <img class="hot" src="img/hot.svg" width="61" height="61" alt="Хит">
-  						<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+  						<p><span class="underline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></p>
   					</a>
             <div class="catalog-button-wrapper">
               <button class="button item-button" type="button">Быстрый просмотр</button>
@@ -139,7 +138,7 @@
                 <p class="price">380₽<span class="price-weight">/кг</span></p>
               </div>
               <img class="hot" src="img/hot.svg" width="61" height="61" alt="Хит">
-  						<p>Сливочно-кофейное с кусочками шоколада</p>
+  						<p><span class="underline">Сливочно-кофейное с кусочками шоколада</span></p>
   					</a>
             <div class="catalog-button-wrapper">
               <button class="button item-button" type="button">Быстрый просмотр</button>
@@ -152,7 +151,7 @@
                 <p class="price">355₽<span class="price-weight">/кг</span></p>
               </div>
               <img class="hot" src="img/hot.svg" width="61" height="61" alt="Хит">
-  						<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+  						<p><span class="underline">Сливочно-клубничное с присыпкой из белого шоколада</span></p>
   					</a>
             <div class="catalog-button-wrapper">
               <button class="button item-button" type="button">Быстрый просмотр</button>
@@ -165,7 +164,7 @@
                 <p class="price">415₽<span class="price-weight">/кг</span></p>
               </div>
               <img class="hot" src="img/hot.svg" width="61" height="61" alt="Хит">
-  						<p>Сливочное крем-брюле с карамельной подливкой</p>
+  						<p><span class="underline">Сливочное крем-брюле с карамельной подливкой</span></p>
   					</a>
             <div class="catalog-button-wrapper">
               <button class="button item-button" type="button">Быстрый просмотр</button>
@@ -195,7 +194,7 @@
       <div class="flex-main">
   		  <section class="news">
   			  <h2 class="news-title">Новое в нашем блоге</h2>
-  			  <p class="news-text"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
+  			  <p class="news-text"><a href="#"><span class="underline-black"> 10 способов сервировки фруктовых щербетов к столу</span></a></p>
   		  </section>
 
   		  <section class="dispatch">
@@ -292,16 +291,16 @@
 
 		  <nav class="footer-links">
   			<ul class="links-list">
-  				<li class="heart"><a href="#">Для поставщиков</a></li>
-          <li><a href="#">Наши документы</a></li>
-  				<li><a href="#">О производстве</a></li>
-  				<li><a href="#">Экологические стандарты</a></li>
+  				<li class="heart"><a class="underline" href="#">Для поставщиков</a></li>
+          <li><a class="underline" href="#">Наши документы</a></li>
+  				<li><a class="underline" href="#">О производстве</a></li>
+  				<li><a class="underline" href="#">Экологические стандарты</a></li>
   			</ul>
   		</nav>
 
   		<div class="footer-copyright">
   			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy.svg" width="108" height="39" alt="HTMLAcademy"></a>
-  			<p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+  			<p>Сделано в <a class="underline" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
   		</div>
   	</footer>
 
@@ -320,60 +319,6 @@
 
     <div class="modal-overlay"></div>
 
-<!--
-    <script>
-      var link = document.querySelector(".map-adress .button");
-      var popup = document.querySelector(".modal");
-      var overlay = document.querySelector(".modal-overlay");
-      var close = document.querySelector(".modal-close");
-        
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-        overlay.classList.add("overlay-show");
-      });
-        
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-        overlay.classList.remove("overlay-show");
-      });
-
-      var background = document.querySelector(".background");
-      var radio1 = document.querySelector(".slider-radio-1");
-      var radio2 = document.querySelector(".slider-radio-2");
-      var radio3 = document.querySelector(".slider-radio-3");
-      var slider1 = document.querySelector(".slider-item-1");
-      var slider2 = document.querySelector(".slider-item-2");
-      var slider3 = document.querySelector(".slider-item-3");
-
-      radio1.addEventListener("click", function (evt) {
-        background.classList.remove("background-2");
-        background.classList.remove("background-3");
-        background.classList.add("background-1");
-        slider1.classList.remove("slider-hide");
-        slider2.classList.add("slider-hide");
-        slider3.classList.add("slider-hide");
-      });
-
-      radio2.addEventListener("click", function (evt) {        
-        background.classList.remove("background-1");
-        background.classList.remove("background-3");
-        background.classList.add("background-2");
-        slider1.classList.add("slider-hide");
-        slider2.classList.remove("slider-hide");
-        slider3.classList.add("slider-hide");
-      });
-
-      radio3.addEventListener("click", function (evt) {        
-        background.classList.remove("background-2");
-        background.classList.remove("background-1");
-        background.classList.add("background-3");
-        slider1.classList.add("slider-hide");
-        slider2.classList.add("slider-hide");
-        slider3.classList.remove("slider-hide");
-      });
-
-    </script>
-  -->
+    <script src="js/js-minified.js"></script>
+  </body>
 </html>
