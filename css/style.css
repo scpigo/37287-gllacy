@@ -1419,7 +1419,8 @@ margin-top: 0;
 }
 
 .filter-select:hover::before {
-  border: 11px solid transparent; border-top: 10px solid black;
+  border: 11px solid transparent; 
+  border-top: 10px solid black;
 }
 
 .filter-price .range-controls {
